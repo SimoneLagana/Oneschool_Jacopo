@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  data: 2023-07-27 17:34:55
+  giorno: MyString
+  codicescuola: 1
+  codiceclasse: 1
+  prof: MyString
+
+two:
+  data: 2023-07-27 17:34:55
+  giorno: MyString
+  codicescuola: 1
+  codiceclasse: 1
+  prof: MyString
