@@ -1,0 +1,2 @@
+class ProvaCompitodue < ApplicationRecord
+end

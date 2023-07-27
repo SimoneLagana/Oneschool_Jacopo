@@ -10,7 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_07_27_153455) do
+ActiveRecord::Schema[7.0].define(version: 2023_07_27_163704) do
+  create_table "prova_compitodues", primary_key: "codice", force: :cascade do |t|
+    t.string "titolo"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "prova_compitos", force: :cascade do |t|
     t.datetime "data"
     t.string "giorno"
