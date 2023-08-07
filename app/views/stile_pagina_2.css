@@ -1,0 +1,53 @@
+*{
+    margin:0;
+    padding:0;
+    background-color: white;
+}
+
+body{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: red;
+    justify-content: center;
+    height:100vh;
+}
+.home{
+    width:100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height:100%;
+    gap: 60px;
+}
+
+.signup{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+.form-field{
+    display: flex;
+    flex-direction: column;
+}
+
+.text-field{
+    height: 24px;
+    width: 240px;
+    font-size: 18px;
+    padding-left: 4px;
+    padding-right: 6px;
+}
+
+.title{
+    font-size: 28px;
+}
+
+.button-field{
+    width: 80px;
+    height: 30px;
+    font-size: 18px;
+}
