@@ -8,8 +8,9 @@ body{
     display:flex;
     flex-direction: column;
     align-items: center;
+    background-color: red;
     justify-content: center;
-    height:100%;
+    height:100vh;
 }
 .home{
     width:100%;
@@ -17,74 +18,45 @@ body{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-}
-.whole-panel{
-    display: flex;
-    flex-direction: row;
-    gap: 70px;
-    justify-content: center;
-    margin-top: 110px;
+    height:100%;
 }
 
-.right-panel{
+.upper-bottons{
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    height: 40px;
+    align-items: center;
+    gap: 180px;
+    width: 90%;
+}
+
+.up-botton{
+    height: 40px;
+    background-color: wheat;
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100px;
+    justify-content: center;
+    font-size: 22px;
+}
+
+.main-panel{
+    height: 300px;
+    background-color: antiquewhite;
+    display:flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 500px;
-    height: 400px;
-    gap: 50px;
+    width:90%;
 }
-
-.calendar{
-    width: 100%;
-    height: 80%;
-    background-color: aquamarine;
-    border-radius: 10px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-}
-
-.meeting{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 100%;
-    height: 20%;
-    background-color: aqua;
-    text-align: center;
-    border-radius: 10px;
-}
-
-.left-panel{
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    padding-top: 30px;
-}
-
-.form-class{
+.panel{
+    width:90%;
+    height: 90%;
     display:flex;
     flex-direction: column;
-    align-items: end;
-    gap: 20px;
-}
-
-.select-class{
-    width: 240px;
-    height: 30px;
-    padding-left: 4px;
-    font-size: 18px;
-}
-
-.submit-button{
-    width: 80px;
-    height: 40px;
-    font-size: 18px;
-
-
+    justify-content: center;
 }
 
 
@@ -120,4 +92,38 @@ body{
     text-align: center;
     font-size: 22px;
     margin-right: 100px;
+}
+
+
+.school-list{
+    margin-top: 20px;
+    display:flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 100%;
+    gap:0;
+    padding: 0;
+    height: 80%;
+    background-color: blanchedalmond;
+    border: 2px solid black;
+}
+
+.school{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    padding-left:20px;
+    padding-right:10px;
+    justify-content: space-between;
+    background-color: aquamarine;
+}
+
+.school-field{
+    width: 80px;
+}
+.modify-school{
+    display: flex;
+    gap: 20px;
+    width: 80px;
+
 }

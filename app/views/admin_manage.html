@@ -24,7 +24,7 @@
             <div class="up-botton" id="second-botton" onclick="show_panel('second-panel');">
                 staff
             </div>
-        </div>
+        </div> 
         <div class="main-panel">
             <div class="panel" id="first-panel" style="display:flex;">
                 <!-- barra di ricerca con bootstrap
@@ -43,16 +43,16 @@
                     <%= form.text_field :query %>
                     <%= form.submit "Search" %>
                 <% end %> -->
-                sas
-                <div class="school-list">
-                    <div class="school">
-                        <label class="school-field">
+                search bar
+                <div class="list">
+                    <div class="item">
+                        <label class="field">
                             schola
                         </label>
-                        <label class="school-field">
+                        <label class="field">
                             roma
                         </label>
-                        <div class="modify-school">
+                        <div class="modify">
                             <label class="edit">
                                 edit
                             </label>
@@ -62,14 +62,14 @@
                         </div>
                         
                     </div>
-                    <div class="school">
-                        <label class="school-field">
+                    <div class="item">
+                        <label class="field">
                             schola
                         </label>
-                        <label class="school-field">
+                        <label class="field">
                             roma
                         </label>
-                        <div class="modify-school">
+                        <div class="modify">
                             <label class="edit">
                                 edit
                             </label>
@@ -82,16 +82,44 @@
                 </div>
             </div>
             <div class="panel" id="second-panel" style="display:none;" >
-                <!-- <%= form_with url: "/search", method: :get do |form| %> -->
-                <form class="form-insert">
-                    <div class="form-container">
-                       <!--
-                            <%= form.label :query, "Search for:" %>
-                        --> 
+                <!-- barra di ricerca con bootstrap
+                <div class="input-group">
+                    <div class="form-outline">
+                      <input type="search" id="form1" class="form-control" />
+                      <label class="form-label" for="form1">Search</label>
                     </div>
-                </form>
+                    <button type="button" class="btn btn-primary">
+                      <i class="fas fa-search"></i>
+                    </button>
+                  </div>
+                barra di ricerca con rails (poi vediamo quale usare)
+                <%= form_with url: "/search", method: :get do |form| %>
+                    <%= form.label :query, "Search for:" %>
+                    <%= form.text_field :query %>
+                    <%= form.submit "Search" %>
+                <% end %> -->
+                search bar
+                <div class="list">
+                    <div class="item" id="">
+                        <label class="field">
+                            name
+                        </label>
+                        <label class="field">
+                            school
+                        </label>
+                        <div class="modify">
+                            <label class="edit">
+                                edit
+                            </label>
+                            <label class="delete">
+                                delete
+                            </label>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
                 
-                sos
             </div>
 
         </div>

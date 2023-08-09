@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stile_pagina_8.css">
+    <script src="pagina_7.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <nav class="navbar">
+        <label class="writ">
+          name
+        </label>
+        <div class="profile">
+          Profile
+        </div>
+      </nav>
+    <div class="home">
+        <div class="upper-bottons">
+            <div class="up-botton" id="first-botton" onclick="show_panel('first-panel');">
+                school
+            </div>
+            <div class="up-botton" id="second-botton" onclick="show_panel('second-panel');">
+                staff
+            </div>
+        </div> 
+        <div class="main-panel">
+            <div class="panel" id="first-panel" style="display:flex;">
+                <!-- <%= form_with url: "/insert", method: :get do |form| %> qui si può specificare anche che 
+                il form è proprio della scuola-->
+                <form class="form-insert">
+                    <div class="form-container">
+                        form insert school
+                       <!--
+                            <%= form.text_field :school_name %>
+                            <%= form.text_field :address %>
+                            <%= form.text_field :school_code %>
+                            <%= form.select :type, ["Technical school", "College", "High-School"] %>
+                            <%= form.submit "Register" %>
+                        --> 
+                    </div>
+                </form>
+            </div>
+            <div class="panel" id="second-panel" style="display:none;" >
+                <!-- <%= form_with url: "/insert", method: :get do |form| %> -->
+                <form class="form-insert">
+                    <div class="form-container">
+                        form insert school staff
+                       <!--
+                            <%= form.text_field :name %>
+                            <%= form.text_field :surname %>
+                            <%= form.text_field :codice_fiscale %>
+                            <%= form.text_field :school_code %>
+                            //ci si può inserire anche la data di nascita, ma non so quanto sia rilevante 
+                            per gli school staff
+                            <%= form.hidden_field :role, value: "school-staff" %>
+                            <%= form.email_field :mail %>
+                            <%= form.password_field :passcode %>
+                            <%= form.submit "Register" %>
+                        --> 
+                    </div>
+                </form>
+                
+                sos
+            </div>
+
+        </div>
+    </div> 
+
+    
+</body>
+</html>

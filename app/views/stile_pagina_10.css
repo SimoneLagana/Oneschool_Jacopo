@@ -1,0 +1,101 @@
+*{
+    margin:0;
+    padding:0;
+    background-color: white;
+}
+
+body{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height:100%;
+}
+.home{
+    width:100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.navbar{
+    background-color: skyblue;
+    height: 70px;
+    position: fixed;
+    top: 0;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+
+.writ{
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    font-size: 22px;
+    height: 70px;
+    margin-left: 100px;
+}
+
+.profile{
+    width: 100px;
+    height: 70px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    font-size: 22px;
+    margin-right: 100px;
+}
+
+
+.main-panel{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 90%;
+    gap: 30px;
+    margin-top: 130px;
+}
+
+.insert{
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    background-color: aqua;
+}
+
+.list{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+}
+
+.communication{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: aquamarine;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.upper{
+    height: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+}
+
+.bottom{
+    background-color: beige;
+}

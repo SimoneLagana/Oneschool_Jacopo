@@ -21,6 +21,7 @@ body{
 .whole-panel{
     display: flex;
     flex-direction: row;
+    width: 90%;
     gap: 70px;
     justify-content: center;
     margin-top: 110px;
@@ -36,9 +37,9 @@ body{
     gap: 50px;
 }
 
-.calendar{
+.panel_left{
     width: 100%;
-    height: 80%;
+    height: 50%;
     background-color: aquamarine;
     border-radius: 10px;
     display: flex;
@@ -47,45 +48,27 @@ body{
     text-align: center;
 }
 
-.meeting{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 100%;
-    height: 20%;
-    background-color: aqua;
-    text-align: center;
-    border-radius: 10px;
-}
+
 
 .left-panel{
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
-    padding-top: 30px;
+    justify-content: center;
+    width: 50%;
+    gap: 50px
 }
 
-.form-class{
+.schedule{
+    width: 100%;
+    height: 100%;
+    background-color: antiquewhite;
     display:flex;
     flex-direction: column;
-    align-items: end;
-    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
 }
 
-.select-class{
-    width: 240px;
-    height: 30px;
-    padding-left: 4px;
-    font-size: 18px;
-}
-
-.submit-button{
-    width: 80px;
-    height: 40px;
-    font-size: 18px;
-
-
-}
 
 
 .navbar{

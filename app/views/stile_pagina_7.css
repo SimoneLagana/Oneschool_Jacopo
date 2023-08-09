@@ -95,7 +95,7 @@ body{
 }
 
 
-.school-list{
+.list{
     margin-top: 20px;
     display:flex;
     flex-direction: column;
@@ -105,9 +105,10 @@ body{
     padding: 0;
     height: 80%;
     background-color: blanchedalmond;
+    border: 2px solid black;
 }
 
-.school{
+.item{
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
@@ -117,12 +118,13 @@ body{
     background-color: aquamarine;
 }
 
-.school-field{
+.field{
     width: 80px;
+    text-align: center;
 }
-.modify-school{
+.modify{
     display: flex;
     gap: 20px;
     width: 80px;
-
+    text-align: center;
 }
