@@ -13,6 +13,15 @@
     <div class="home">
         <label class="title"> Login as admin</label>
         <form class="signup">
+            <!--
+            <%= form_with url: "/login", method: :get do |form| %>
+            <%= %>
+            //il :email è come se fosse l'id quindi si può usare css su quello
+            <%= form.email_field :email %>
+            <%= form.password_field :passcode %>
+            <%= form.submit "login" %>
+            <%= end %>
+        -->
             <div class="form-field">
                 <label class="label-field"> Email</label>
                 <input type="text" id="email" class="text-field">
@@ -29,7 +38,8 @@
                 <input type="submit" class="button-field" value="login">
             </div>
            
-
+            You don't have an account?
+            <!--<%= link_to "signup", "/signup" %>-->
 
         </form>
     </div>

@@ -7,20 +7,34 @@
     <title>Document</title>
 </head>
 <body>
-    <div class="navbar">
-        
-    </div>
+    <nav class="navbar">
+        <label class="writ">
+          name
+        </label>
+        <div class="profile">
+          Profile
+        </div>
+      </nav>
     <div class="home">
         <div class="whole-panel">
             <div class="right-panel">
+                <!--<%= link_to "/teacher/calendar" do %>-->
                 <div class="calendar">
                     Agenda personale
                 </div>
+                <!-- <%= end %>-->
+                <!--<%= link_to "/teacher/meeting" do %>-->
                 <div class="meeting">
                     Link meeting
                 </div>
+                <!-- <%= end %>-->
             </div>
             <div class="left-panel">
+                <!-- <%= form_with url: "/class", method: :get do |form| %> 
+                    <%= form.select :city, ["Berlin", "Chicago", "Madrid"] //mettere un ciclo for 
+                    per indicare le classi disponibili %>
+                    %= form.submit "vai alla classe" %>
+                -->
                 <form class="form-class">
                     <select class="select-class">
                         <option value="Select class">Select class</option>

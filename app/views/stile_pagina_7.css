@@ -27,9 +27,8 @@ body{
     justify-content: center;
     height: 40px;
     align-items: center;
-    gap: 160px;
+    gap: 180px;
     width: 90%;
-    background-color: aqua;
 }
 
 .up-botton{
@@ -40,7 +39,7 @@ body{
     align-items: center;
     width: 100px;
     justify-content: center;
-    font-size: 20px;
+    font-size: 22px;
 }
 
 .main-panel{
@@ -58,4 +57,72 @@ body{
     display:flex;
     flex-direction: column;
     justify-content: center;
+}
+
+
+.navbar{
+    background-color: skyblue;
+    height: 70px;
+    position: fixed;
+    top: 0;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+
+.writ{
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    font-size: 22px;
+    height: 70px;
+    margin-left: 100px;
+}
+
+.profile{
+    width: 100px;
+    height: 70px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    font-size: 22px;
+    margin-right: 100px;
+}
+
+
+.school-list{
+    margin-top: 20px;
+    display:flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 100%;
+    gap:0;
+    padding: 0;
+    height: 80%;
+    background-color: blanchedalmond;
+}
+
+.school{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    padding-left:20px;
+    padding-right:10px;
+    justify-content: space-between;
+    background-color: aquamarine;
+}
+
+.school-field{
+    width: 80px;
+}
+.modify-school{
+    display: flex;
+    gap: 20px;
+    width: 80px;
+
 }

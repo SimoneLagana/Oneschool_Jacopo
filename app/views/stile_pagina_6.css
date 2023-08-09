@@ -19,7 +19,7 @@ body{
     align-items: center;
     justify-content: center;
     height:100%;
-    gap: 60px;
+    margin-top: 70px;
 }
 
 .panel-container{
@@ -28,6 +28,8 @@ body{
     flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
+    
+    background-color: bisque;
     width: 90%;
 }
 
@@ -40,4 +42,40 @@ body{
     justify-content: center;
     align-items: center;
     border-radius: 10px;
+    font-size: 18px;
+}
+
+.navbar{
+    background-color: skyblue;
+    height: 70px;
+    top: 0;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    z-index: 10;
+    position: fixed;
+}
+
+.writ{
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    font-size: 22px;
+    height: 70px;
+    margin-left: 100px;
+}
+
+.profile{
+    width: 100px;
+    height: 70px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    font-size: 22px;
+    margin-right: 100px;
 }

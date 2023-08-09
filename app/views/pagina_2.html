@@ -7,11 +7,17 @@
     <title>Registrati_admin</title>
 </head>
 <body>
-    <div class="navbar">
-        
-    </div>
     <div class="home">
         <label class="title"> Signup as admin</label>
+        <!--
+            <%= form_with url: "/signup", method: :get do |form| %>
+            <%= %>
+            <%= form.text_field :username %> //il :username è come se fosse l'id quindi si può usare css su quello
+            <%= form.email_field :email %>
+            <%= form.password_field :passcode %>
+            <%= form.submit "submit" %>
+            <%= end %>
+        -->
         <form class="signup">
             <div class="form-field">
                 <label class="label-field"> Username</label>
@@ -32,7 +38,8 @@
             <div>
                 <input type="submit" class="button-field" value="submit">
             </div>
-           
+            Do you already have an account?
+            <!--<%= link_to "login", "/login" %>-->
 
 
         </form>
