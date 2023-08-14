@@ -96,7 +96,14 @@ body{
     margin-right: 100px;
 }
 
-
+.upper-part{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    padding-left: 10px;
+    padding-right: 10px;
+}
 .list{
     margin-top: 20px;
     display:flex;

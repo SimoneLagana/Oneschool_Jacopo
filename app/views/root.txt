@@ -1,0 +1,20 @@
+/index
+
+/admin
+get '/admin/login' to: Admins#login
+post '/admin/signup' to: Admins#new
+nel controller redirect_to '/admin/index' 
+/admin/profile to: Admins#edit, Admins#delete
+/admin/manage to: Schools#edit or Staffs#edit, to: Schools#delete or Staffs#delete
+/admin/insert to: Schools#new or Staffs#new
+
+/staff/login
+/staff/index
+/staff/profile
+/staff/communication
+/staff/communication/insert
+/staff/manage
+/staff/schedule
+/staff/schedule/insert
+
+/teacher/login
