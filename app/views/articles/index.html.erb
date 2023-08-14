@@ -4,13 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <%= stylesheet_link_tag "prova.css" %>
+    <%= javascript_include_tag('admin.js') %>
     <title>OneSchool</title>
 </head>
 <body>
     <nav class="navbar">
       <label class="writ">
-        name
+        sas
       </label>
+      
       <div class="profile">
         Profile
       </div>
@@ -19,27 +21,114 @@
     
     <div class="home">
         <label class="title">OneSchool</label>
+        <div class="inner-home">
+          <div class="upper-bottons">
+            <div class="up-botton" id="first-botton" onclick="show_panel('first-panel');">
+                school
+            </div>
+            <div class="up-botton" id="second-botton" onclick="show_panel('second-panel');">
+                staff
+            </div>
+          </div> 
+          <div class="main-panel">
+            <div class="panel" id="first-panel" style="display:flex;">
+                
+                <%= form_with url: "/search", method: :get do |form| %>
+                   
+                    <%= form.text_field :query %>
+                    <%= form.submit "Search" %>
+                <% end %> 
+                
+                <div class="list">
+                    <div class="item">
+                        <label class="field">
+                            schola
+                        </label>
+                        <label class="field">
+                            roma
+                        </label>
+                        <div class="modify">
+                            <label class="edit">
+                                edit
+                            </label>
+                            <label class="delete">
+                                delete
+                            </label>
+                        </div>
+                        
+                    </div>
+                    <div class="item">
+                        <label class="field">
+                            schola
+                        </label>
+                        <label class="field">
+                            roma
+                        </label>
+                        <div class="modify">
+                            <label class="edit">
+                                edit
+                            </label>
+                            <label class="delete">
+                                delete
+                            </label>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="panel" id="second-panel" style="display:none;" >
+               
+                <%= form_with url: "/search", method: :get do |form| %>
+                    <%= form.text_field :query %>
+                    <%= form.submit "Search" %>
+                <% end %> 
+                
+                <div class="list">
+                    <div class="item" id="">
+                        <label class="field">
+                            name
+                        </label>
+                        <label class="field">
+                            school
+                        </label>
+                        <div class="modify">
+                            <label class="edit">
+                                edit
+                            </label>
+                            <label class="delete">
+                                delete
+                            </label>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                
+            </div>
+
+          </div>
+        </div> 
         <div class="panel-container">
-            <!--<%= link_to "/login_schoolstaff" do %>-->
+            <%#= link_to "/login_schoolstaff" do %>
             <div class="panel">
                 Schoolstaff
             </div>
-            <!-- <%= end %>-->
-            <!--<%= link_to "/login_parent" do %>-->
+            <%#= end %> 
+            <%#= link_to "/login_parent" do %>
             <div class="panel">
                 Parent
             </div>
-            <!-- <%= end %>-->
-            <!--<%= link_to "/login_teacher" do %>-->
+            <%#= end %>
+            <%#= link_to "/login_teacher" do %>
             <div class="panel ">
                 Teacher
             </div>
-            <!-- <%= end %>-->
-            <!--<%= link_to "/login_student" do %>-->
+             <%#= end %> 
+            <%#= link_to "/login_student" do %>
             <div class="panel">
                 Student
             </div>
-            <!-- <%= end %>-->
+            <%#= end %> 
 
         </div>
     </div>

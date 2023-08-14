@@ -8,8 +8,9 @@ body{
     display:flex;
     flex-direction: column;
     align-items: center;
+    background-color: red;
     justify-content: center;
-    height:100%;
+    height:100vh;
 }
 .home{
     width:100%;
@@ -17,6 +18,8 @@ body{
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    height:100%;
+    gap: 60px;
 }
 
 .navbar{
@@ -54,72 +57,32 @@ body{
 }
 
 
-.main-panel{
+.signup{
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
-    width: 90%;
-    gap: 30px;
-    margin-top: 130px;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
 }
-.title{
-    width:100%;
-    text-align: center;
+.form-field{
+    display: flex;
+    flex-direction: column;
+}
+
+.text-field{
+    height: 24px;
+    width: 240px;
     font-size: 18px;
+    padding-left: 4px;
+    padding-right: 6px;
 }
 
-.insert{
-    height: 20px;
-    width:200px;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    text-align: center;
-    background-color: aqua;
-}
-.top{
-    height: 20px;
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: space-between;
+.title{
+    font-size: 28px;
 }
 
-.sort{
-    margin-right: 60px;
-    width: 100px;
-    text-align: center;
-    background-color: aquamarine;
-}
-.list{
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-
-}
-
-.communication{
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    background-color: aquamarine;
-    padding-left: 10px;
-    padding-right: 10px;
-}
-
-.upper{
+.button-field{
+    width: 80px;
     height: 30px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding-right: 15px;
-    padding-left: 15px;
-    
-}
-
-.bottom{
-    background-color: beige;
-    padding-left: 15px;
-    padding-right:15px;
+    font-size: 18px;
 }

@@ -8,85 +8,18 @@ body{
     display:flex;
     flex-direction: column;
     align-items: center;
-    background-color: red;
+    
     justify-content: center;
     height:100vh;
 }
+
 .home{
     width:100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height:100%;
-    gap: 20px;
-}
-
-.title{
-    margin-bottom: 60px;
-    font-size: 36px;
-}
-.panel-container{
-    display: flex;
-    width:100%;
-    justify-content: center;
-    gap: 50px;
-
-}
-
-.panel{
-    width: 180px;
-    height: 300px;
-    display: flex;
-    flex-direction: column;
-    justify-content:center;
-    text-align: center;
-    vertical-align: center;
-    background-color: #00ffff;
-    padding-top: 40px;
-    font-size: 25px;
-}
-
-.navbar{
-    background-color: skyblue;
-    height: 70px;
-    position: fixed;
-    top: 0;
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    flex-wrap: nowrap;
-    justify-content: space-between;
-}
-
-.writ{
-    width: 300px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-    font-size: 22px;
-    height: 70px;
-    margin-left: 100px;
-}
-
-.profile{
-    width: 100px;
-    height: 70px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-    font-size: 22px;
-    margin-right: 100px;
-}
-
-.inner-home{
-    width:100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    
     height:100%;
 }
 
@@ -118,7 +51,7 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width:90%;
+    width:100%;
 }
 .panel{
     width:90%;
@@ -185,7 +118,6 @@ body{
     padding-right:10px;
     justify-content: space-between;
     background-color: aquamarine;
-    width: 100%;
 }
 
 .field{
@@ -195,6 +127,6 @@ body{
 .modify{
     display: flex;
     gap: 20px;
-   
+    width: 80px;
     text-align: center;
 }

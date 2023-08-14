@@ -1,6 +1,6 @@
 {
   "name": "app",
-  "private": "true",
+  "private": true,
   "scripts": {
     "build:css:compile": "sass ./app/assets/stylesheets/application.bootstrap.scss:./app/assets/builds/application.css --no-source-map --load-path=node_modules",
     "build:css:prefix": "postcss ./app/assets/builds/application.css --use=autoprefixer --output=./app/assets/builds/application.css",
@@ -16,6 +16,7 @@
     "bootstrap": "^5.3.1",
     "bootstrap-icons": "^1.10.5",
     "esbuild": "^0.19.0",
+    "jquery": "^3.7.0",
     "nodemon": "^3.0.1",
     "postcss": "^8.4.27",
     "postcss-cli": "^10.1.0",
@@ -23,5 +24,10 @@
   },
   "browserslist": [
     "defaults"
-  ]
+  ],
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/SimoneLagana/Oneschool_Jacopo.git",
+  "author": "SimoneLagana <lagana.1946083@studenti.uniroma1.it>",
+  "license": "MIT"
 }

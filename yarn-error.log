@@ -1,8 +1,8 @@
 Arguments: 
-  /usr/bin/node /mnt/c/Users/cinqu/AppData/Roaming/npm/node_modules/yarn/bin/yarn.js add esbuild
+  /usr/bin/node /mnt/c/Users/cinqu/AppData/Roaming/npm/node_modules/yarn/bin/yarn.js init
 
 PATH: 
-  /home/mome44/.rbenv/versions/2.7.2/lib/ruby/gems/2.7.0/bin:/home/mome44/.rbenv/versions/2.7.2/bin:/home/mome44/.rbenv/libexec:/home/mome44/.rbenv/plugins/ruby-build/bin:/home/mome44/.rbenv/shims:/home/mome44/.rbenv/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/ProgramData/Oracle/Java/javapath:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/Program Files (x86)/Intel/Intel(R) Management Engine Components/DAL:/mnt/c/Program Files/Intel/Intel(R) Management Engine Components/DAL:/mnt/c/Program Files (x86)/Intel/Intel(R) Management Engine Components/IPT:/mnt/c/Program Files/Intel/Intel(R) Management Engine Components/IPT:/mnt/c/Program Files/Intel/WiFi/bin/:/mnt/c/Program Files/Common Files/Intel/WirelessCommon/:/mnt/c/Program Files (x86)/Windows Live/Shared:/mnt/c/msys64/mingw64/bin:/mnt/c/Users/cinqu/AppData/Local/Programs/Python/Python310/Scripts:/mnt/c/Users/cinqu/AppData/Local/Programs/Python/Python310:/mnt/c/Program Files/Java/jdk-18.0.2.1/bin:/mnt/c/Program Files/nodejs/:/mnt/c/Program Files/Git/cmd:/mnt/c/Ruby32-x64/bin:/mnt/c/Program Files (x86)/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin:/mnt/c/Users/cinqu/AppData/Local/Programs/Microsoft VS Code/bin:/mnt/c/Users/cinqu/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/cinqu/AppData/Roaming/npm
+  /home/mome44/.rbenv/shims:/home/mome44/.rbenv/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/ProgramData/Oracle/Java/javapath:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/Program Files (x86)/Intel/Intel(R) Management Engine Components/DAL:/mnt/c/Program Files/Intel/Intel(R) Management Engine Components/DAL:/mnt/c/Program Files (x86)/Intel/Intel(R) Management Engine Components/IPT:/mnt/c/Program Files/Intel/Intel(R) Management Engine Components/IPT:/mnt/c/Program Files/Intel/WiFi/bin/:/mnt/c/Program Files/Common Files/Intel/WirelessCommon/:/mnt/c/Program Files (x86)/Windows Live/Shared:/mnt/c/msys64/mingw64/bin:/mnt/c/Users/cinqu/AppData/Local/Programs/Python/Python310/Scripts:/mnt/c/Users/cinqu/AppData/Local/Programs/Python/Python310:/mnt/c/Program Files/Java/jdk-18.0.2.1/bin:/mnt/c/Program Files/nodejs/:/mnt/c/Program Files/Git/cmd:/mnt/c/Ruby32-x64/bin:/mnt/c/Program Files (x86)/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin:/mnt/c/Users/cinqu/AppData/Local/Programs/Microsoft VS Code/bin:/mnt/c/Users/cinqu/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/cinqu/AppData/Local/Programs/Python/Python310:/mnt/c/Users/cinqu/AppData/Local/Programs/Python/Python310/Scripts:/mnt/c/Program Files/Java/jdk-18.0.2.1/bin:/mnt/c/Users/cinqu/AppData/Roaming/npm:/mnt/c/Program Files/nodejs/
 
 Yarn version: 
   1.22.19
@@ -14,8 +14,17 @@ Platform:
   linux x64
 
 Trace: 
-  Error: getaddrinfo EAI_AGAIN registry.yarnpkg.com
-      at GetAddrInfoReqWrap.onlookup [as oncomplete] (node:dns:108:26)
+  Error: canceled
+      at Interface.<anonymous> (/mnt/c/Users/cinqu/AppData/Roaming/npm/node_modules/yarn/lib/cli.js:137150:13)
+      at Interface.emit (node:events:514:28)
+      at [_ttyWrite] [as _ttyWrite] (node:internal/readline/interface:1131:18)
+      at ReadStream.onkeypress (node:internal/readline/interface:270:20)
+      at ReadStream.emit (node:events:514:28)
+      at emitKeys (node:internal/readline/utils:357:14)
+      at emitKeys.next (<anonymous>)
+      at ReadStream.onData (node:internal/readline/emitKeypressEvents:64:36)
+      at ReadStream.emit (node:events:514:28)
+      at addChunk (node:internal/streams/readable:324:12)
 
 npm manifest: 
   {
