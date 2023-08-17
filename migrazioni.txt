@@ -1,0 +1,229 @@
+class CreateUsers < ActiveRecord::Migration[6.0]
+  def change
+    create_table :users do |t|
+      t.string :name
+      t.string :surname
+      t.string :CF
+      t.string :mail
+      t.string :password
+      t.string :school_code
+
+      t.timestamps
+    end
+  end
+end
+
+class CreateAdmins < ActiveRecord::Migration[6.0]
+  def change
+    create_table :admins do |t|
+      t.string :name
+      t.string :surname
+      t.string :CF
+      t.string :mail
+      t.string :password
+
+      t.timestamps
+    end
+  end
+end
+
+class CreateSchools < ActiveRecord::Migration[6.0]
+  def change
+    create_table :schools do |t|
+      t.string :address
+      t.string :name
+      t.string :code
+      t.string :school_type
+
+      t.timestamps
+    end
+  end
+end
+
+class CreateSchoolStaffs < ActiveRecord::Migration[6.0]
+  def change
+    create_table :school_staffs do |t|
+      
+
+      t.timestamps
+    end
+  end
+end
+
+class CreateCommunications < ActiveRecord::Migration[6.0]
+  def change
+    create_table :communications do |t|
+      t.string :title
+      t.text :text
+      t.datetime :date
+
+      t.timestamps
+    end
+  end
+end
+
+class CreateFamilies < ActiveRecord::Migration[6.0]
+  def change
+    create_table :families do |t|
+      t.references :user, foreign_key: { to_table: :users }
+      t.string :offspring_cf
+
+      t.timestamps
+    end
+  end
+end
+
+class CreateCommitments < ActiveRecord::Migration[6.0]
+  def change
+    create_table :commitments do |t|
+      t.string :title
+      t.datetime :date
+      t.string :cfprof
+
+      t.timestamps
+    end
+  end
+end
+
+class CreateMeetings < ActiveRecord::Migration[6.0]
+  def change
+    create_table :meetings do |t|
+      t.datetime :date
+      t.string :cfprof, null: false, index: true, foreign_key: { to_table: 'commitments' }
+      t.references :family, foreign_key: true
+
+      t.timestamps
+    end
+
+    add_foreign_key 'meetings', 'commitments', column: 'cfprof', primary_key: 'cfprof'
+  end
+end
+
+class CreateStudents < ActiveRecord::Migration[6.0]
+  def change
+    create_table :students do |t|
+      t.date :birthdate
+      t.references :user, foreign_key: { to_table: 'users' }
+      t.references :family, foreign_key: true, primary_key: 'user_cf'
+      t.string :class_code, null: false, index: true, foreign_key: { to_table: 'classes' }
+      t.references :school, foreign_key: true
+
+      t.timestamps
+    end
+
+    add_foreign_key 'students', 'classes', column: 'class_code', primary_key: 'code'
+  end
+end
+
+class CreateClasses < ActiveRecord::Migration[6.0]
+  def change
+    create_table :classes do |t|
+      t.string :code, null: false, index: true, unique: true 
+      t.references :school, foreign_key: true
+
+      t.timestamps 
+    end 
+  end 
+end 
+
+
+class CreateSubjects < ActiveRecord::Migration[6.0]
+  def change
+    create_table :subjects do |t|
+      t.string :week_day
+      t.time :time
+      t.references :school, foreign_key: true
+      t.references :klass, foreign_key: { to_table: 'classes' }
+      t.string :cfprof, null: false, index: true, foreign_key: { to_table: 'profs' }
+      t.string :name
+
+      t.timestamps
+    end
+
+    add_foreign_key 'subjects', 'profs', column: 'cfprof', primary_key: 'user_cf'
+  end
+end
+
+class CreateHomeworks < ActiveRecord::Migration[6.0]
+  def change
+    create_table :homeworks do |t|
+      t.boolean :delivered
+      t.text :text
+      t.datetime :date
+      t.string :name
+      t.references :school, foreign_key: true
+      t.references :klass, foreign_key: { to_table: 'classes' }
+      t.string :cfprof, null: false, index: true, foreign_key: { to_table: 'profs' }
+
+      t.timestamps
+    end
+
+    add_foreign_key 'homeworks', 'profs', column: 'cfprof', primary_key: 'user_cf'
+  end
+end
+
+class CreateNotes < ActiveRecord::Migration[6.0]
+  def change
+    create_table :notes do |t|
+      t.string :code
+      t.datetime :date
+      t.text :desc
+      t.string :cfprof, null: false, index: true, foreign_key: { to_table: 'profs' }
+      t.string :cfstud, null: false, index: true, foreign_key: { to_table: 'students' }
+
+      t.timestamps
+    end
+
+    add_foreign_key 'notes', 'profs', column: 'cfprof', primary_key: 'user_cf'
+    add_foreign_key 'notes', 'students', column: 'cfstud', primary_key: 'user_cf'
+  end
+end
+
+class CreateGrades < ActiveRecord::Migration[6.0]
+  def change
+    create_table :grades do |t|
+      t.integer :value
+      t.datetime :date
+      t.string :cfstud, null: false, index: true, foreign_key: { to_table: 'students' }
+      t.references :school, foreign_key: true
+      t.string :name
+      t.references :klass, foreign_key: { to_table: 'classes' }
+      t.string :cfprof, null: false, index:true ,foreign_key:{to_table:'profs'}
+
+      t.timestamps 
+    end 
+
+    add_foreign_key 'grades','profs',column:'cfprof',primary_key:'user_cf'
+    add_foreign_key 'grades','students',column:'cfstud',primary_key:'user_cf'
+  end 
+end 
+
+class CreateAbsences < ActiveRecord::Migration[6.0]
+  def change 
+    create_table :absences do |t| 
+        t.datetime   :date 
+        t.string     :name_sub_name 
+        t.references   school ,foreign_key:true 
+        t.references   klass ,foreign_key:{to_table:'classes'}
+        t.string     cfprof ,null:false,index:true ,foreign_key:{to_table:'profs'}
+        t.string     cf_student ,null:false,index:true ,foreign_key:{to_table:'students'}
+        t.boolean    justified 
+
+        t.timestamps 
+    end 
+
+    add_foreign_key   absences ,profs,column:'cfprof',primary_key:'user_cf'
+    add_foreign_key   absences ,students,column:'cf_student',primary_key:'user_cf'
+  end 
+end 
+
+class CreateProfs < ActiveRecord::Migration[6.0]
+  def change 
+    create_table   profs do |t| 
+        t.references   user ,foreign_key:{to_table:'users'}
+
+        t.timestamps 
+    end 
+  end 
+end 
+

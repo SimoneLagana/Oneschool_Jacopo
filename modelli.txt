@@ -1,0 +1,85 @@
+class User < ApplicationRecord
+  belongs_to :school, foreign_key: :school_code
+  has_one :school_staff
+  has_many :families, foreign_key: :user_cf, primary_key: :CF
+  has_many :students, foreign_key: :user_cf, primary_key: :CF
+
+  validates :name, presence: true
+  validates :surname, presence: true
+  validates :CF, presence: true, uniqueness: true
+  validates :mail, presence: true, uniqueness: true
+  validates :password, presence: true
+end
+
+class Admin < ApplicationRecord 
+end 
+
+class School < ApplicationRecord 
+  has_many :users, foreign_key: 'school_code', primary_key: 'code' 
+  has_many :classes 
+end 
+
+class SchoolStaff < ApplicationRecord 
+  belongs_to :user 
+end 
+
+class Communication < ApplicationRecord 
+end 
+
+class Family < ApplicationRecord 
+  belongs_to :user, foreign_key: 'user_cf', primary_key: 'CF' 
+  has_many   :students, foreign_key: 'offspring_cf', primary_key: 'offspring_cf' 
+end 
+
+class Commitment < ApplicationRecord 
+end 
+
+class Meeting < ApplicationRecord 
+  belongs_to   :family 
+  belongs_to   :commitment, foreign_key: [:cfprof, date], primary_key: [:cfprof, date] 
+end 
+
+class Student < ApplicationRecord 
+  belongs_to   :user, foreign_key: 'user_cf', primary_key: 'CF' 
+  belongs_to   :family, foreign_key: 'family_cf', primary_key: 'user_cf' 
+  belongs_to   klass, class_name:'Class', foreign_key:'class_code', primary_key:'code'  
+end 
+
+class Class < ApplicationRecord 
+  belongs_to   school  
+end  
+
+class Subject < ApplicationRecord 
+  belongs_to   school  
+  belongs_to   klass,class_name:'Class'  
+  belongs_to   prof,class_name:'Prof',foreign_key:'cfprof',primary_key:'user_cf'  
+end 
+
+class Homework < ApplicationRecord 
+  belongs_to   school  
+  belongs_to   klass,class_name:'Class'  
+  belongs_to   prof,class_name:'Prof',foreign_key:'cfprof',primary_key:'user_cf'  
+end 
+
+class Note < ApplicationRecord 
+  belongs_to   prof,class_name:'Prof',foreign_key:'cfprof',primary_key:'user_cf'  
+  belongs_to   student,class_name:'Student',foreign_key:'cfstud',primary_key:'user_cf'  
+end 
+
+class Grade < ApplicationRecord 
+  belongs_to   school  
+  belongs_to   klass,class_name:'Class'  
+  belongs_to   prof,class_name:'Prof',foreign_key:'cfprof',primary_key:'user_cf'  
+  belongs_to   student,class_name:'Student',foreign_key:'cfstud',primary_key:'user_cf'  
+end 
+
+class Absence < ApplicationRecord 
+  belongs_to   school  
+  belongs_to   klass,class_name:'Class'  
+  belongs_to   prof,class_name:'Prof',foreign_key:'cfprof',primary_key:'user_cf'  
+  belongs_to   student,class_name:'Student',foreign_key:'cf_student',primary_key:'user_cf'  
+end 
+
+class Prof < ApplicationRecord 
+  belongs_to   user,foreign_key:'user_cf',primary_key:'CF' 
+end 
