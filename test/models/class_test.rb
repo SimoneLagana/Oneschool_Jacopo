@@ -1,6 +1,6 @@
 require "test_helper"
 
-class ProvaTest < ActiveSupport::TestCase
+class ClassTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end
