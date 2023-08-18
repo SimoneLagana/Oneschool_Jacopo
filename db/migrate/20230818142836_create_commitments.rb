@@ -4,7 +4,7 @@ class CreateCommitments < ActiveRecord::Migration[7.0]
       t.string :title
       t.date :date
       t.string :CFprof
-      t.timestamps
+      t.string :CFfamily
     end
   end
 end

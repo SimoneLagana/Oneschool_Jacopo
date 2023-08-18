@@ -7,13 +7,17 @@ class CreateUsers < ActiveRecord::Migration[7.0]
       t.string :mail
       t.string :password
       t.string :school_code
-      t.string :birthdate
-      # si creano delle ridondanze
-      t.string :childCF
-      t.string :familyCF
-      # ---------------------------
+      t.string :type, null: false
+      
+      #student
+      t.datetime :birthdate
       t.string :class_code
+
       t.timestamps
     end
+
+    #add_foreign_key :users, :schools, column: :school_code, primary_key: :code
   end
 end
+
+

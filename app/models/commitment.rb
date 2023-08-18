@@ -1,3 +1,3 @@
 class Commitment < ApplicationRecord
-    belongs_to :prof, foreign_key :CFprof
+    belongs_to :teachers, primary_key: :CFprof
 end

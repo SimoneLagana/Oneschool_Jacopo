@@ -1,5 +1,3 @@
 class Student < User
-    belongs_to :family, foreign_key: :familyCF
-    # manca ancora da definire la migrazione e il modello di Class
-    validates :childCF, absence: true
+    #belongs_to :class_room, foreign_key: [:class_code, :school_code], primary_key: [:class_code, :school_code]
 end

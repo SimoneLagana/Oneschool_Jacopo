@@ -4,7 +4,7 @@ class CreateCommunications < ActiveRecord::Migration[7.0]
       t.string :id, primary_key: true
       t.string :title
       t.text :text
-      t.date :date
+      t.datetime :date
       t.timestamps
     end
   end
