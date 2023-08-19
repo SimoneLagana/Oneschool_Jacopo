@@ -9,7 +9,7 @@ class CreateAbsences < ActiveRecord::Migration[7.0]
       t.string :subject_name
       t.string :weekday
       t.string :time
-      t.boolean :justified
+      t.boolean :justified, default: false
       t.timestamps
     end
   end

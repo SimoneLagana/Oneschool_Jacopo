@@ -12,10 +12,11 @@ class Homework < ApplicationRecord
     validates :subject_name, presence: true
 
     def valid_foreign_key
-        return false, unless (class_code.present? && school_code.present? && weekday.present? && time.present? $$ subject_name.present?)
+        return false, unless (class_code.present? && school_code.present? && weekday.present? && time.present? && subject_name.present?)
         
         unless Subject.exists?(class_code: class_code, school_code: school_code, weekday: weekday, time: time, name: subject_name) 
           errors.add(:class_code, 'is not a valid class code for the given school')
         end
       end
+    end
 end
