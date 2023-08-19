@@ -51,7 +51,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_08_19_105816) do
     t.string "link"
   end
 
-  create_table "communications", id: :string, force: :cascade do |t|
+  create_table "communications", force: :cascade do |t|
     t.string "title"
     t.text "text"
     t.datetime "date"
@@ -160,13 +160,16 @@ ActiveRecord::Schema[7.0].define(version: 2023_08_19_105816) do
     t.datetime "updated_at", null: false
   end
 
+  add_foreign_key "absences", "users", column: "CFprof", primary_key: "CF"
   add_foreign_key "absences", "users", column: "CFstudent", primary_key: "CF"
   add_foreign_key "class_rooms", "schools", column: "school_code", primary_key: "code"
   add_foreign_key "commitments", "users", column: "CFfamily", primary_key: "CF"
   add_foreign_key "commitments", "users", column: "CFprof", primary_key: "CF"
   add_foreign_key "family_students", "users", column: "CFfamily", primary_key: "CF"
   add_foreign_key "family_students", "users", column: "CFstudent", primary_key: "CF"
+  add_foreign_key "grades", "users", column: "CFprof", primary_key: "CF"
   add_foreign_key "grades", "users", column: "CFstudent", primary_key: "CF"
+  add_foreign_key "homeworks", "users", column: "CFprof", primary_key: "CF"
   add_foreign_key "notes", "users", column: "CFprof", primary_key: "CF"
   add_foreign_key "notes", "users", column: "CFstudent", primary_key: "CF"
   add_foreign_key "subjects", "users", column: "CFprof", primary_key: "CF"

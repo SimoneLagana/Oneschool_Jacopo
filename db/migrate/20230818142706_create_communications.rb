@@ -1,7 +1,6 @@
 class CreateCommunications < ActiveRecord::Migration[7.0]
   def change
-    create_table :communications, id: false do |t|
-      t.string :id, primary_key: true
+    create_table :communications do |t|
       t.string :title
       t.text :text
       t.datetime :date

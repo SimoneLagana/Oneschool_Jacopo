@@ -1,6 +1,6 @@
 class CreateHomeworks < ActiveRecord::Migration[7.0]
   def change
-    create_table :homeworks, id: false, primary_key: [:date, :school_code, :class_code, :CFprof, :subject_name] do |t|
+    create_table :homeworks, id: false, primary_key: [:date, :school_code, :class_code, :weekday, :time, :subject_name] do |t|
       t.boolean :delivered
       t.text :text
       t.datetime :date
