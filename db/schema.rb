@@ -18,6 +18,8 @@ ActiveRecord::Schema[7.0].define(version: 2023_08_19_105816) do
     t.string "school_code"
     t.string "class_code"
     t.string "subject_name"
+    t.string "weekday"
+    t.string "time"
     t.boolean "justified"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -42,7 +44,8 @@ ActiveRecord::Schema[7.0].define(version: 2023_08_19_105816) do
 
   create_table "commitments", id: false, force: :cascade do |t|
     t.string "title"
-    t.date "date"
+    t.datetime "date"
+    t.string "type", null: false
     t.string "CFprof"
     t.string "CFfamily"
     t.string "link"
@@ -68,13 +71,15 @@ ActiveRecord::Schema[7.0].define(version: 2023_08_19_105816) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "grades", force: :cascade do |t|
+  create_table "grades", id: false, force: :cascade do |t|
     t.integer "value"
     t.string "CFprof"
     t.string "school_code"
     t.string "class_code"
     t.string "CFstudent"
     t.string "subject_name"
+    t.string "weekday"
+    t.string "time"
     t.datetime "date"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -98,7 +103,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_08_19_105816) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "notes", id: :string, force: :cascade do |t|
+  create_table "notes", force: :cascade do |t|
     t.string "CFprof"
     t.string "CFstudent"
     t.datetime "date"
@@ -127,7 +132,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_08_19_105816) do
 
   create_table "subjects", id: false, force: :cascade do |t|
     t.string "weekday"
-    t.time "hour"
+    t.string "time"
     t.string "school_code"
     t.string "CFprof"
     t.string "class_code"
@@ -155,10 +160,15 @@ ActiveRecord::Schema[7.0].define(version: 2023_08_19_105816) do
     t.datetime "updated_at", null: false
   end
 
+  add_foreign_key "absences", "users", column: "CFstudent", primary_key: "CF"
   add_foreign_key "class_rooms", "schools", column: "school_code", primary_key: "code"
   add_foreign_key "commitments", "users", column: "CFfamily", primary_key: "CF"
   add_foreign_key "commitments", "users", column: "CFprof", primary_key: "CF"
   add_foreign_key "family_students", "users", column: "CFfamily", primary_key: "CF"
   add_foreign_key "family_students", "users", column: "CFstudent", primary_key: "CF"
+  add_foreign_key "grades", "users", column: "CFstudent", primary_key: "CF"
+  add_foreign_key "notes", "users", column: "CFprof", primary_key: "CF"
+  add_foreign_key "notes", "users", column: "CFstudent", primary_key: "CF"
+  add_foreign_key "subjects", "users", column: "CFprof", primary_key: "CF"
   add_foreign_key "users", "schools", column: "school_code", primary_key: "code"
 end
