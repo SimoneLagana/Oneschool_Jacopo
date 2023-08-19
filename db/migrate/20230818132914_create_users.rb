@@ -11,7 +11,8 @@ class CreateUsers < ActiveRecord::Migration[7.0]
       
       #student
       t.datetime :birthdate
-      t.string :class_code
+      t.string :student_class_code
+      t.string :student_school_code
 
       t.timestamps
     end
