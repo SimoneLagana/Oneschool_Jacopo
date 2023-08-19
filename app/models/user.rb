@@ -1,9 +1,14 @@
 class User < ApplicationRecord
     belongs_to :school, foreign_key: 'school_code', primary_key: 'code'
-
-    #validates :name, presence: true
-    #validates :surname, presence: true
-    #validates :CF, presence: true, uniqueness: true
-    #validates :mail, presence: true, uniqueness: true
-    #validates :password, presence: true
+    has_many :family_student, foreign_key: 'CFfamily', primary_key: 'CF'
+    has_many :family_student, foreign_key: 'CFstudent', primary_key: 'CF'
+    has_many :commitments, foreign_key: 'CFprof', primary_key: 'CF'
+    has_many :commitments, foreign_key: 'CFfamily', primary_key: 'CF'
+    
+    validates :name, presence: true
+    validates :surname, presence: true
+    validates :CF, presence: true, uniqueness: true
+    validates :mail, presence: true, uniqueness: true
+    validates :password, presence: true
+    
 end

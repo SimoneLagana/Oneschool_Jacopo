@@ -5,6 +5,7 @@ class CreateCommitments < ActiveRecord::Migration[7.0]
       t.date :date
       t.string :CFprof
       t.string :CFfamily
+      t.string :link
     end
   end
 end
