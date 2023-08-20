@@ -12,6 +12,6 @@ class CreateAbsences < ActiveRecord::Migration[7.0]
       t.boolean :justified, default: false
       t.timestamps
     end
-    add_index :absences, [:school_code, :CFstudent, :date, :class_code, :name, :weekday, :time ], unique: true, name: 'chiave_primaria_absences'
+    add_index :absences, [:school_code, :CFstudent, :date, :class_code, :weekday, :time ], unique: true, name: 'chiave_primaria_absences'
   end
 end
