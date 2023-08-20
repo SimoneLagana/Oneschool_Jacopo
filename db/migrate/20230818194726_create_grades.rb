@@ -12,5 +12,6 @@ class CreateGrades < ActiveRecord::Migration[7.0]
       t.datetime :date
       t.timestamps
     end
+    add_index :grades, [:school_code, :CFstudent, :class_code, :subject_name, :date], unique: true, name: 'chiave_primaria_grades'
   end
 end

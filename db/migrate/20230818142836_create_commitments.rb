@@ -8,5 +8,6 @@ class CreateCommitments < ActiveRecord::Migration[7.0]
       t.string :CFfamily
       t.string :link
     end
+    add_index :commitments, [:date,:CFprof], unique: true, name: 'chiave_primaria_commitments'
   end
 end

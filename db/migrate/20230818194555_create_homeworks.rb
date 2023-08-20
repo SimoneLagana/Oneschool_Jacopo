@@ -13,5 +13,7 @@ class CreateHomeworks < ActiveRecord::Migration[7.0]
       t.string :subject_name
       t.timestamps
     end
+    add_index :homeworks, [:date, :school_code, :class_code, :weekday, :time, :subject_name], unique: true, name: 'chiave_primaria_homeworks'
+
   end
 end

@@ -1,6 +1,7 @@
 class CreateClassRooms < ActiveRecord::Migration[7.0]
   def change
-    create_table :class_rooms, id: false, primary_key: [:class_code, :school_code] do |t|
+    #, id: false, primary_key: [:class_code, :school_code]
+    create_table :class_rooms do |t|
       t.string :class_code
       t.string :school_code
       t.timestamps

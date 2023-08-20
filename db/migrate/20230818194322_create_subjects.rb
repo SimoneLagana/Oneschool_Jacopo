@@ -9,7 +9,7 @@ class CreateSubjects < ActiveRecord::Migration[7.0]
       t.string :name
       t.timestamps
     end
-    #add_index :subject, [:weekday, :hour]
+    add_index :subjects, [:school_code, :class_code, :weekday, :time], unique: true, name: 'chiave_primaria_subjects'
     
   end
 end
