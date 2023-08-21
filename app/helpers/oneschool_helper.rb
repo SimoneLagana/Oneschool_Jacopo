@@ -1,0 +1,2 @@
+module OneschoolHelper
+end
