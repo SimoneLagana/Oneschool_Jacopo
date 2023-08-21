@@ -1,0 +1,17 @@
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <title>OneSchool</title>
+</head>
+<body>
+  <tbody>
+    <% @admins.each do |admin| %>
+      <tr>
+        <td><%= admin.name %></td>
+      </tr>
+    <% end %>
+  </tbody>
+  </body>
+</html>

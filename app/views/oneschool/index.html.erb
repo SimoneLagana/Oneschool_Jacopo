@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <%= stylesheet_link_tag "prova.css" %>
+    <%= javascript_include_tag('admin.js') %>
+    <title>OneSchool</title>
+</head>
+<body>
+    <nav class="navbar">
+      <label class="writ">
+        sas
+      </label>
+    
+    <%= link_to "/admin/signup" do %>
+
+      <div class="profile">
+        Profile
+      </div>
+      <% end %>
+    </nav>
+   
+    
+    <div class="home">
+        <label class="title">OneSchool</label>
+        <div class="panel-container">
+            <%#= link_to "/login_schoolstaff" do %>
+            <div class="panel">
+                Schoolstaff
+            </div>
+            <%#= end %> 
+            <%#= link_to "/login_parent" do %>
+            <div class="panel">
+                Parent
+            </div>
+            <%#= end %>
+            <%#= link_to "/login_teacher" do %>
+            <div class="panel ">
+                Teacher
+            </div>
+             <%#= end %> 
+            <%#= link_to "/login_student" do %>
+            <div class="panel">
+                Student
+            </div>
+            <%#= end %> 
+
+        </div>
+    </div>
+</body>
+</html>
