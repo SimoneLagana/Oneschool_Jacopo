@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="referrer" content="no-referrer">
+    <%= stylesheet_link_tag "prova_meeting.css" %>
+   <script src="https://prova/external_api.js"></script>
+   <script>
+    const domain = 'prova';
+      const options = {
+        roomName: 'JitsiMeetAPIExample',
+        width: 700,
+        height: 700,
+        configOverwrite: { language: 'en' }
+      };
+      APImeeting = new JitsiMeetExternalAPI(domain, options);
+      APImeeting.setParentNode(document.getElementById('contenitor'));
+   </script>
+    <title>Document</title>
+</head>
+<body> 
+    <nav class="navbar">
+        <label class="writ">
+          name
+        </label>
+        <div class="profile">
+          Profile
+        </div>
+      </nav>
+    <div class="home">
+      <div class="meeting-screen" id="contenitor">
+      </div>
+      
+      
+    </div>
+    
+</body>
+</html>
