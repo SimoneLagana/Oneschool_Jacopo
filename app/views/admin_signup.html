@@ -10,13 +10,14 @@
     <div class="home">
         <label class="title"> Signup as admin</label>
         <!--
-            <%= form_with url: "/signup", method: :get do |form| %>
-            <%= %>
-            <%= form.text_field :username %> //il :username è come se fosse l'id quindi si può usare css su quello
+            <%= form_with url: "/admin/signup", method: :get do |form| %>
+            <%= form.text_field :name %> //il :username è come se fosse l'id quindi si può usare css su quello
+            <%= form.text_field :surname %>
+            <%= form.text_field :CF %>
             <%= form.email_field :email %>
-            <%= form.password_field :passcode %>
+            <%= form.password_field :password %>
             <%= form.submit "submit" %>
-            <%= end %>
+            <% end %>
         -->
         <form class="signup">
             <div class="form-field">

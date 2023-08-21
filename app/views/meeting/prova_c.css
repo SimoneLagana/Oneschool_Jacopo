@@ -8,7 +8,7 @@ body{
     display:flex;
     flex-direction: column;
     align-items: center;
-    background-color: red;
+    
     justify-content: center;
     height:100vh;
 }
@@ -20,31 +20,6 @@ body{
     justify-content: center;
     height:100%;
     gap: 20px;
-}
-
-.title{
-    margin-bottom: 60px;
-    font-size: 36px;
-}
-.panel-container{
-    display: flex;
-    width:100%;
-    justify-content: center;
-    gap: 50px;
-
-}
-
-.panel{
-    width: 180px;
-    height: 300px;
-    display: flex;
-    flex-direction: column;
-    justify-content:center;
-    text-align: center;
-    vertical-align: center;
-    background-color: #00ffff;
-    padding-top: 40px;
-    font-size: 25px;
 }
 
 .navbar{
@@ -81,12 +56,14 @@ body{
     margin-right: 100px;
 }
 
-.link_style:link{
-    text-decoration: none;
-    color: black;
+.meeting-screen{
+    background-color: aquamarine;
+
 }
 
-.link_style:visited{
-    text-decoration: none;
-    color: rgb(48, 0, 0);
+.meeting-button{
+    width: 180px;
+    font-size: 18px;
+    border-radius: 5px;
+    margin-top: 70px;
 }

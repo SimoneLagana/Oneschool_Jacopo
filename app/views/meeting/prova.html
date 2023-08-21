@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="referrer" content="no-referrer">
+    <link rel="stylesheet" href="prova_c.css">
+    <script src="https://meet.jit.si/external_api.js"></script>
+   <script>
+  const domain = 'meet.jit.si';
+  const options = {
+    roomName: 'NomeDellaTuaRiunione', // Sostituisci con il nome desiderato per la riunione
+    width: 800, // Larghezza del frame della riunione
+    height: 600, // Altezza del frame della riunione
+  };
+  const api = new JitsiMeetExternalAPI(domain, options);
+  api.setParentNode(document.getElementById('meeting-container'));
+</script>
+
+    <title>Document</title>
+</head>
+<body> 
+    <nav class="navbar">
+        <label class="writ">
+          name
+        </label>
+        <div class="profile">
+          Profile
+        </div>
+      </nav>
+    <div class="home">
+     
+      <div id="meeting-container"></div>
+
+      
+      
+    </div>
+    
+</body>
+</html>

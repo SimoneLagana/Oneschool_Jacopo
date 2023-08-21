@@ -8,12 +8,11 @@ class AddForeignKeyToStudents < ActiveRecord::Migration[7.0]
     add_foreign_key :notes, :users, column: :CFprof, primary_key: :CF
     add_foreign_key :notes, :users, column: :CFstudent, primary_key: :CF
     add_foreign_key :grades, :users, column: :CFstudent, primary_key: :CF
+    add_foreign_key :grades, :users, column: :CFprof, primary_key: :CF
     add_foreign_key :absences, :users, column: :CFstudent, primary_key: :CF
-    #add_index :students, [:student_class_code, :school_code]
-    #add_foreign_key :users, :class_rooms, column: :student_class_code, primary_key: :class_code
-    #add_foreign_key :users, :class_rooms, column: :school_code, primary_key: :school_code
-    #add_foreign_key :students, :class_rooms, column: :surname, primary_key: :class_code
-    #add_foreign_key :students, :class_rooms, column: :school_code, primary_key: :school_code
+    add_foreign_key :absences, :users, column: :CFprof, primary_key: :CF
+    add_foreign_key :homeworks, :users, column: :CFprof, primary_key: :CF
+    #add_index :subjects, [:school_code, :class_code, :name,:weekday, :time ], unique: true
     
   end 
 end

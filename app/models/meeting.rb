@@ -1,4 +1,4 @@
 class Meeting < Commitment
-    validates :CFfamily, prensence: true
+    validates :CFfamily, presence: true
     validates :link, presence:true
 end
