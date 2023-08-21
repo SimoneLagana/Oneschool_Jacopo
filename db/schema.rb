@@ -23,7 +23,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_08_19_105816) do
     t.boolean "justified", default: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index "\"school_code\", \"CFstudent\", \"date\", \"class_code\", \"name\", \"weekday\", \"time\"", name: "chiave_primaria_absences", unique: true
+    t.index ["school_code", "CFstudent", "date", "class_code", "weekday", "time"], name: "chiave_primaria_absences", unique: true
   end
 
   create_table "admins", primary_key: "CF", id: :string, force: :cascade do |t|
@@ -74,7 +74,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_08_19_105816) do
   end
 
   create_table "grades", id: false, force: :cascade do |t|
-    t.integer "value"
+    t.float "value"
     t.string "CFprof"
     t.string "school_code"
     t.string "class_code"
@@ -162,7 +162,6 @@ ActiveRecord::Schema[7.0].define(version: 2023_08_19_105816) do
     t.string "type", null: false
     t.datetime "birthdate"
     t.string "student_class_code"
-    t.string "student_school_code"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
