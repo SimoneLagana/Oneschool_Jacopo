@@ -57,4 +57,5 @@ end
 # The :transaction strategy is faster, but might give you threading problems.
 # See https://github.com/cucumber/cucumber-rails/blob/master/features/choose_javascript_database_strategy.feature
 Cucumber::Rails::Database.javascript_strategy = :truncation
-
+Cucumber::Rails::Database.autorun_database_cleaner = false
+riga ENV['CR_REMOVE_RACK_TEST_HELPERS'] = 'true'
